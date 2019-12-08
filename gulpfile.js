@@ -1,25 +1,24 @@
-const {src, dest, watch} = require('gulp');
-const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass        = require('gulp-sass');
 
-// Static server
-function bs() {
-    serveSass();
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+
     browserSync.init({
-        server: {
-            baseDir: "./"
-        }
+        server: "./app"
     });
-    watch("./*.html").on('change', browserSync.reload);
-    watch("./sass/**/*.sass", serveSass);
-    watch("./js/*.js").on('change', browserSync.reload);
-};
 
-function serveSass() {
-    return src("./sass/*.sass")
+    gulp.watch("app/scss/*.scss", ['sass']);
+    gulp.watch("app/*.html").on('change', browserSync.reload);
+});
+
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("app/scss/*.scss")
         .pipe(sass())
-        .pipe(dest("./css"))
+        .pipe(gulp.dest("app/css"))
         .pipe(browserSync.stream());
-};
+});
 
-exports.serve = bs;
+gulp.task('default', ['serve']);

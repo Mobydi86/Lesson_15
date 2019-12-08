@@ -1,26 +1,25 @@
 {
-  "name": "lesson_13",
+  "name": "lesson_15",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Препроцессоры в CSS",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mobydi86/Lesson_13.git"
+    "url": "git+https://github.com/Mobydi86/Lesson_15.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mobydi86/Lesson_13/issues"
+    "url": "https://github.com/Mobydi86/Lesson_15/issues"
   },
-  "homepage": "https://github.com/Mobydi86/Lesson_13#readme",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2"
-  },
-  "dependencies": {
-    "browser-sync": "^2.26.7"
-  }
+  "homepage": "https://github.com/Mobydi86/Lesson_15#readme"
 }
