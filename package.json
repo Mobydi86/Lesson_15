@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Препроцессоры в CSS",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp-sass": "^4.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
